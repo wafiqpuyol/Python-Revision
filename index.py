@@ -20,3 +20,16 @@ except FileNotFoundError:
         print("Error: The file or directory could not be found.")
 except UnicodeDecodeError:
         print("Error: Failed to decode the file with UTF-8 encoding.")
+
+
+# Writing & Reading
+try:
+    with open('temp/dummy.txt', 'w+', encoding='utf-8') as file:
+        print(file.tell())     #points to the 0th index
+        print(file.read())     #nothing will print
+        file.write("hossain")  #wipe out the existing content then write this
+        print(file.tell())     #points to the last index still nothing will print
+except FileNotFoundError:
+        print("Error: The file or directory could not be found.")
+except UnicodeDecodeError:
+        print("Error: Failed to decode the file with UTF-8 encoding.")
