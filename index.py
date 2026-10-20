@@ -33,3 +33,18 @@ except FileNotFoundError:
         print("Error: The file or directory could not be found.")
 except UnicodeDecodeError:
         print("Error: Failed to decode the file with UTF-8 encoding.")
+
+
+
+# Write in a specific position without overwriting existing contents
+try:
+    with open('temp/dummy.txt', 'r+', encoding='utf-8') as file:
+        file.read()             #moving the pointer at the end
+        file.write(" hossain")  #append it
+        print(file.seek(1))     #moves the pointer
+        file.write("I")         #overwrite the existing positioned content with the lastest one
+        print(file.tell())     #points to the last index still nothing will print
+except FileNotFoundError:
+        print("Error: The file or directory could not be found.")
+except UnicodeDecodeError:
+        print("Error: Failed to decode the file with UTF-8 encoding.")
