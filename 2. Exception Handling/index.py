@@ -54,3 +54,16 @@ except ZeroDivisionError as z:
   print("Issue with arithmetic operation: ", z)
 except Exception as e:
   print("Caught in parent exception: ", e)
+
+
+# Raise an exception
+try:
+  num = 0
+  if num == 0:
+    raise ZeroDivisionError("You passed 0 in denominator which will result in ZeroDivision")
+  cal = 100 / num
+  print(cal)
+except ZeroDivisionError as z:
+  print("Issue with arithmetic operation: ", z)
+except Exception as e:
+  print("Caught in parent exception: ", e)
