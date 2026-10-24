@@ -67,3 +67,26 @@ except ZeroDivisionError as z:
   print("Issue with arithmetic operation: ", z)
 except Exception as e:
   print("Caught in parent exception: ", e)
+
+
+#Gracefully Exiting from program
+import sys
+import os
+
+while True:
+    input_from_user = int(input("Press 1 for addition, 2 for subtraction, 3 for exit : "))
+
+    if input_from_user == 1:
+        print("Doing addition")
+        break
+    elif input_from_user == 2:
+        print("Doing subtraction")
+        break
+    elif input_from_user == 3:
+        print("Exiting the System")
+        # sys.exit()
+        os._exit(0)
+    else:
+        print("None of the above, please choose from 1, 2 or 3 : ")
+
+print("out of the loop")
