@@ -34,3 +34,23 @@ finally :
     except NameError:
         print("File was never initialised.")
 print("Try except block completed.")
+
+
+# Handling the exception event through parent Exception
+try:
+  num = 0
+  cal = 100 / num
+  print(cal)
+except Exception as e:
+  print("Caught in parent exception: ", e)
+ 
+
+# Handling the exact exception event
+try:
+  num = 0
+  cal = 100 / num
+  print(cal)
+except ZeroDivisionError as z:
+  print("Issue with arithmetic operation: ", z)
+except Exception as e:
+  print("Caught in parent exception: ", e)
